@@ -1,14 +1,11 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-
 public class NumberProcessor {
     private String fileName;
-
     public NumberProcessor(String fileName) {
         this.fileName = fileName;
     }
-
     public int findMin() throws IOException {
         int min = Integer.MAX_VALUE;
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
@@ -23,7 +20,6 @@ public class NumberProcessor {
         }
         return min;
     }
-
     public int findMax() throws IOException {
         int max = Integer.MIN_VALUE;
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
@@ -38,7 +34,6 @@ public class NumberProcessor {
         }
         return max;
     }
-
     public int sum() throws IOException {
         int sum = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
@@ -50,7 +45,6 @@ public class NumberProcessor {
         }
         return sum;
     }
-
     public long mult() throws IOException {
         long mult = 1;
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
